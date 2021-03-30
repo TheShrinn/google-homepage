@@ -20,33 +20,107 @@ font-family: Arial, Helvetica, sans-serif;
     flex-grow: 1;
 }
 
-.google-container {
+.google-block {
 display: block;
-margin: auto
+margin: auto;
+padding: 20px; 
 
 }
 
 .searchbar-container {
 display: flex;
-flex-wrap: wrap;
 justify-content: center;
 }
 
-.searchbar-container > div{
-background-color: #ffffff;
-margin: 14px;
-padding: 0;
-font-size: 14px;
-font-family: Arial, Helvetica, sans-serif;
+.searchbar-container > div {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+flex-grow: 1;
 }
 
 .searchbar input[type=text] {
+flex-grow: 1;
 border: 1px solid #dfe1e5; 
 border-radius: 24px;
-float: center;
-font-size: 14px;
+font-size: 16px;
+font-family: arial,sans-serif;
 background-color: #ffffff;
+padding: 0;
+height: 34px;
+margin-top: -37px;
+margin: 0;
+height: 34px;
+word-wrap: break-word;
 }
+
+.button-container{
+display: flex;
+justify-content: center;
+flex-direction: row;
+}
+
+.button {
+padding: 0 16px;
+margin: 11px 4px;
+background-color: #f8f9fa; 
+border-radius: 4px;
+border: 1px solid #f8f9fa;
+font-family: arial, sans-serif;
+font-size: 14px;
+line-height: 27px;
+cursor: pointer;
+}
+
+.textformat {
+font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+
+a:link, a:visited {
+text-decoration: underline;
+color: blue; 
+}
+
+.footer-containercan {
+box-sizing: border-box;
+flex-shrink: 0;
+display: flex;
+justify-content: left;
+flex-basis: 100%;
+background-color: #f2f2f2;
+height: 40px;
+align-items: center;
+border-bottom: 1px solid #dadce0;
+}
+
+.footer-containercan > div {
+font-size: 14px;
+font-family: arial,sans-serif;
+color: #70757a;
+margin: 20px;
+padding: 2px;
+} 
+
+.footer-container {
+display: flex;
+justify-content: center;
+justify-content: space-evenly;
+flex-basis: 100%;
+background-color: #f2f2f2;
+height: 30px;
+padding: 0 20px;
+align-items: center;
+}
+
+.footer-container > div {
+font-size: 14px;
+font-family: arial,sans-serif;
+color: #70757a;
+align-items: center;
+flex-wrap: wrap;
+} 
 
 </style>
 
@@ -59,11 +133,31 @@ background-color: #ffffff;
 </div>
 
 <body>
-    <img class = "google-container" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"></img>
+    <img class = "google-block" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"></img>
 
-    <div class = "searchbar"> 
-        <div> <input type="text"> </div>
+    <div class = "searchbar-container"> 
+        <div class = "searchbar" > <input type = "text"> </div>
     </div>
+
+    <div class = "button-container"> 
+        <div><input class = "button" value = "Google Search" type = "submit"></div>
+        <div><input class = "button" value = "I'm Feeling Lucky" type = "submit"></div>
+    </div>
+
+    <div class = "textformat">Google offered in:
+        <a href = "#link" target="_blank">Francais </a> </div>
 </body>
 
-<footer></footer> 
+<footer>
+    <div class = "footer-containercan">
+        <div>Canada</div>
+    </div>
+    <div class = "footer-container">
+        <div>Advertising</div>
+        <div>Business</div>
+        <div>How Search Works</div>
+        <div>Privacy</div>
+        <div>Terms</div>
+        <div>Settings</div>
+    </div>
+</footer> 
